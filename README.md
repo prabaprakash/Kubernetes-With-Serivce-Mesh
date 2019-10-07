@@ -9,6 +9,8 @@ Be ready with Digitial Ocean Kubernetes with 1 master and 1 node
 
 # 1. Echo Web App
 
+`$ cd 1. Echo Web app`
+
 `$ kubectl apply  -f deployment.yaml`
 
 `$ kubectl apply  -f service.yaml`
