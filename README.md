@@ -7,7 +7,7 @@ Be ready with Digitial Ocean Kubernetes with 1 master and 1 node
 `$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/provider/cloud-generic.yaml`
 
 
-# 1. Echo Web App
+# 1. Echo App
 
 `$ cd 1. Echo Web app`
 
