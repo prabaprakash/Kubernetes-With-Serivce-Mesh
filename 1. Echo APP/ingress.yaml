@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  echo-ingress
+spec:
+  rules:
+  - host: echo1.vaayadi.in
+    http:
+      paths:
+      - backend:
+          serviceName: echo1
+          servicePort: 80
