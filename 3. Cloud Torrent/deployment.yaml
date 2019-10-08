@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudtorrent
+spec:
+  selector:
+    matchLabels:
+      app: cloudtorrent
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cloudtorrent
+    spec:
+      containers:
+      - name: cloudtorrent
+        image: jpillora/cloud-torrent
+        volumeMounts:
+          - name: nfs-volume
+            mountPath: /downloads
+        ports:
+        - containerPort: 3000
+      volumes:
+      - name: nfs-volume
+        nfs: 
+          # URL for the NFS server
+          server: 10.244.1.193 # Change this!
+          path: /

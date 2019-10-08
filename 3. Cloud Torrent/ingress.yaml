@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  cloudtorrent-ingress
+spec:
+  rules:
+  - host: cloudtorrent.vaayadi.in
+    http:
+      paths:
+      - backend:
+          serviceName: cloudtorrent
+          servicePort: 80
