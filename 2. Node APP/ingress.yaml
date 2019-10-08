@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  nodejsping-ingress
+spec:
+  rules:
+  - host: nodejsping.vaayadi.in
+    http:
+      paths:
+      - backend:
+          serviceName: nodejsping
+          servicePort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejsping
+spec:
+  selector:
+    matchLabels:
+      app: nodejsping
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nodejsping
+    spec:
+      containers:
+      - name: nodejsping
+        image: prabakaran/nodejsping
+        ports:
+        - containerPort: 80
