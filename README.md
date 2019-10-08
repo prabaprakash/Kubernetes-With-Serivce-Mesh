@@ -16,6 +16,8 @@ TLS
 
 `helm install --name cert-manager --namespace kube-system jetstack/cert-manager --version v0.8.0`
 
+for more checkout https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-with-cert-manager-on-digitalocean-kubernetes
+
 
 
 # 1. Echo APP
