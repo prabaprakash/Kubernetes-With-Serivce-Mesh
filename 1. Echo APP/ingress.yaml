@@ -1,8 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name:  echo-ingress
+  name:  echo1-ingress
+  annotations:  
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
 spec:
+  tls:
+  - hosts:
+    - echo1.vaayadi.in
+    secretName: echo1.vaayadi.in
   rules:
   - host: echo1.vaayadi.in
     http:
