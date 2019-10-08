@@ -27,6 +27,30 @@ Be ready with Digitial Ocean Kubernetes with 1 master and 1 node
 
 `$ kubectl apply  -f ingress.yaml`
 
+# 3. Cloud Torrent
+
+`$ cd 3. Cloud Torrent`
+
+`$ cd volume`
+
+`$ kubectl apply -f 1.pod.yaml`
+
+`$ kubectl apply -f 2.service.yaml`
+
+`$ kubectl apply -f 3.persistantVolume.yaml`
+
+`$ kubectl apply -f 4.persistantVolumeClaim`
+
+`$ cd ..`
+
+`$ kubectl apply  -f deployment.yaml`
+
+`$ kubectl apply  -f service.yaml`
+
+`$ kubectl apply  -f ingress.yaml`
+
+
+# get Node
 
 `kubectl --kubeconfig="k8s-cluster-kubeconfig.yaml" get nodes`
 

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejsproxy
+spec:
+  ports:
+  - port: 80
+    targetPort: 3128
+  selector:
+    app: nodejsproxy

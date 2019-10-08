@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-nfs-share
+  namespace: default
+spec:
+  capacity:
+    storage: 1Gi # This size is used to match a volume to a tenents claim
+  accessModes:
+    - ReadWriteMany # Access modes are defined below
+  persistentVolumeReclaimPolicy: Recycle # Reclaim policies are defined below 
+  nfs:
+    server: 10.245.154.76 # Please change this to your NFS server
+    path: /

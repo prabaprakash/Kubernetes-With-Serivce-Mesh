@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  nodejsproxy-ingress
+spec:
+  rules:
+  - host: nodejsproxy.vaayadi.in
+    http:
+      paths:
+      - backend:
+          serviceName: nodejsproxy
+          servicePort: 80

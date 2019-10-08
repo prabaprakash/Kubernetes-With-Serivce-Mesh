@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejsproxy
+spec:
+  selector:
+    matchLabels:
+      app: nodejsproxy
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nodejsproxy
+    spec:
+      containers:
+      - name: nodejsproxy
+        image: sameersbn/squid
+        ports:
+        - containerPort: 3128
