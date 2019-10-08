@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: cloudtorrent
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,13 +16,11 @@ spec:
       - name: cloudtorrent
         image: jpillora/cloud-torrent
         volumeMounts:
-          - name: nfs-volume
+          - name: data
             mountPath: /downloads
         ports:
         - containerPort: 3000
       volumes:
-      - name: nfs-volume
-        nfs: 
-          # URL for the NFS server
-          server: 10.244.1.193 # Change this!
-          path: /
+      - name: data
+        persistentVolumeClaim:
+         claimName: myapp-nfs

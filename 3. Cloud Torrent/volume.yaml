@@ -1,10 +1,10 @@
-# # Note - an NFS server isn't really a Kubernetes
-# # concept. We're just creating it in Kubernetes
-# # for illustration and convenience. In practice,
-# # it might be run in some other system.
+# Note - an NFS server isn't really a Kubernetes
+# concept. We're just creating it in Kubernetes
+# for illustration and convenience. In practice,
+# it might be run in some other system.
 
-# # Create a service to expose the NFS server
-# # to pods inside the cluster.
+# Create a service to expose the NFS server
+# to pods inside the cluster.
 
 # kind: Service
 # apiVersion: v1
@@ -55,24 +55,24 @@
 #   namespace: default
 # spec:
 #   capacity:
-#     storage: 5Gi # This size is used to match a volume to a tenents claim
+#     storage: 1Gi # This size is used to match a volume to a tenents claim
 #   accessModes:
 #     - ReadWriteMany # Access modes are defined below
 #   persistentVolumeReclaimPolicy: Recycle # Reclaim policies are defined below 
 #   nfs:
-#     server: 10.245.99.106 # Please change this to your NFS server
+#     server: 10.245.154.76 # Please change this to your NFS server
 #     path: /
 
 # ---
 
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: myapp-nfs
-  namespace: default
-spec:
-  accessModes:
-    - ReadWriteOnce # Access modes for volumes is defined under Persistent Volumes
-  resources:
-    requests:
-      storage: 5Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: myapp-nfs
+#   namespace: default
+# spec:
+#   accessModes:
+#     - ReadWriteOnce # Access modes for volumes is defined under Persistent Volumes
+#   resources:
+#     requests:
+#       storage: 1Gi
