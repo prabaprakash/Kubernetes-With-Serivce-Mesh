@@ -63,8 +63,17 @@ for more checkout https://www.digitalocean.com/community/tutorials/how-to-set-up
 `$ kubectl apply  -f ingress.yaml`
 
 
-# get Node
+# Kubectl Get Nodes
 
 `kubectl --kubeconfig="k8s-cluster-kubeconfig.yaml" get nodes`
+
+
+# Kubectl Delete All
+
+`kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all`
+
+`kubectl delete ingress --all`
+
+`kubectl delete pvc pv --all`
 
 
