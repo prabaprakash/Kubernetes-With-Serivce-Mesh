@@ -6,6 +6,8 @@ Be ready with Digitial Ocean Kubernetes with 1 master and 1 node
 
 `$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/provider/cloud-generic.yaml`
 
+`$ kubectl get svc --namespace=ingress-nginx`
+
 TLS
 
 `kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.8/deploy/manifests/00-crds.yaml`
