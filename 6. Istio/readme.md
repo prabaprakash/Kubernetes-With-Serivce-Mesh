@@ -3,7 +3,7 @@
 `https://www.digitalocean.com/community/tutorials/how-to-install-and-use-istio-with-kubernetes`
 
 # Kubectl
-
+```
 $ helm repo add istio.io https://storage.googleapis.com/istio-release/releases/1.1.7/charts/
 $ helm repo list
 
@@ -22,3 +22,4 @@ $ kubectl get svc -n istio-system
 $ kubectl get pods -n istio-system
 $ kubectl label namespace default istio-injection=enabled
 $ kubectl get namespace -L istio-injection
+```
