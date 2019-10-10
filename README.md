@@ -76,6 +76,10 @@ for more checkout https://www.digitalocean.com/community/tutorials/how-to-set-up
 
 `kubectl delete daemonsets,replicasets,services,deployments,pods,rc --all`
 
+`kubectl delete configmaps --all`
+
+`kubectl delete crds kubectl get crds | grep 'istio.io' | awk '{print $1, $8}`
+
 `kubectl delete ingress --all`
 
 `kubectl delete pvc pv --all`
