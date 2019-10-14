@@ -22,4 +22,7 @@ $ kubectl get svc -n istio-system
 $ kubectl get pods -n istio-system
 $ kubectl label namespace default istio-injection=enabled
 $ kubectl get namespace -L istio-injection
+
+Istio Injection Disable
+$ kubectl label namespace istio-system istio-injection-
 ```
